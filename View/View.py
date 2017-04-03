@@ -6,6 +6,7 @@ from Tkinter import *
 from ttk import *
 import Database.Db as DB
 import Controller.Controller as C
+import Database.Entity as Entity
 
 # Ai putea incerca sa faci toate functiile ca fiind functii imbricate constructorului, si sa incerci sa accesezi astfel unii membri.
 # Cam toate widgeturile ar trebui declarate in constructor, si dupa prelucrate in functiile imbricate aferente, pentru a reusi. :)
@@ -24,13 +25,15 @@ class UI(Frame):
         # self.entities_list_content = Listbox()
         entities_names_frame = Frame()
         entities_names = Listbox(entities_names_frame)
+        details_frame = Frame()
+        entity_info = Text(details_frame, height=10, width=50)
         self.grid()
 
         def init_UI(self):
-              # self.parent.title("Buttons")
-    #        self.style = Style()
-    #        self.style.theme_use("default")
-    #        self.frame.grid()
+            # self.parent.title("Buttons")
+            # self.style = Style()
+            # self.style.theme_use("default")
+            # self.frame.grid()
             self.parent.title("PyEnDe")
             entities_list()
             # self.separator()
@@ -43,20 +46,27 @@ class UI(Frame):
             save_button()
             # self.grid()
             # for x in range(10):
-            #     Grid.columnconfigure(self, x, weight=1)
+            # Grid.columnconfigure(self, x, weight=1)
             # for y in range(5):
-            #     Grid.rowconfigure(self, y, weight=1)
+            # Grid.rowconfigure(self, y, weight=1)
 
         def entities_list():
+            def on_select(self):
+                # print "Selected " + str(entities_names.get(ACTIVE))
+                entity_details = DB.Database.get_entity_details(entities_names.get(ACTIVE))
+                entity_info.delete("1.0", END) # asta ar putea fi cauza - need to investigate
+                entity_info.insert(END, entity_details)
+
             # entities_names_frame = Frame()
             # entities_names = Listbox(entities_names_frame)
+            entities_names.bind('<<ListboxSelect>>', on_select)
             entities_names.pack(side=LEFT, fill=Y, expand=True)
             # entities_names.config(highlightbackground="blue")
             scrollbar = Tkinter.Scrollbar(entities_names_frame, orient="vertical")
             scrollbar.pack(side=LEFT, fill=Y)
-            entities = DB.Database.retrieve_database_entities()
+            entities = DB.Database.get_entities()
             for item in entities:
-                print item
+                # print item
                 entities_names.insert(END, item)
             entities_names.config(yscrollcommand=scrollbar.set)
             scrollbar.config(command=entities_names.yview)
@@ -110,15 +120,18 @@ class UI(Frame):
             encrypt_and_decrypt_frame.grid(row=1, column=1, ipady=10)
 
         def save_button():
+            def save():
+                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END))
+                DB.Database.set_new_content(entity)
             save_frame = Frame()
-            save_button = Button(save_frame, text="Save")
+            save_button = Button(save_frame, text="Save", command=save)
             save_button.grid(row=0, column=1)
             # decrypt_frame.grid(row=1, column=2)
             save_frame.grid(row=0, column=3, ipadx=10, pady= 25, sticky=N)
 
         def details():
-            details_frame = Frame()
-            entity_info = Text(details_frame, height=10, width=50)
+            # details_frame = Frame()
+            # entity_info = Text(details_frame, height=10, width=50)
             # entity_info.bind("<Key>", self.update_size)
             entity_info.columnconfigure(0, weight=1)
             entity_info.rowconfigure(0, weight=1)
