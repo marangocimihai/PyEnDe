@@ -7,6 +7,7 @@ from ttk import *
 import Database.Db as DB
 import Controller.Controller as C
 import Database.Entity as Entity
+import Constants.Constants as Constants
 
 # Ai putea incerca sa faci toate functiile ca fiind functii imbricate constructorului, si sa incerci sa accesezi astfel unii membri.
 # Cam toate widgeturile ar trebui declarate in constructor, si dupa prelucrate in functiile imbricate aferente, pentru a reusi. :)
@@ -126,6 +127,8 @@ class UI(Frame):
             # decrypt_frame = Frame()
             decrypt_button = Button(frame, text="Decrypt")
             decrypt_button.grid(row=0, column=1)
+            if Constants.Constans.is_encrypted == False:
+                decrypt_button.state(["disabled"])
             # decrypt_frame.grid(row=1, column=2)
             return decrypt_button
 
