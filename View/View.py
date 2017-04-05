@@ -50,13 +50,15 @@ class UI(Frame):
             # for y in range(5):
             # Grid.rowconfigure(self, y, weight=1)
 
-        def entities_list():
-            def on_select(self):
-                # print "Selected " + str(entities_names.get(ACTIVE))
-                entity_details = DB.Database.get_entity_details(entities_names.get(ACTIVE))
-                entity_info.delete("1.0", END) # asta ar putea fi cauza - need to investigate
+        def on_select(self):
+            # print "Selected " + str(entities_names.curselection())
+            # print "TIPUL: " + str(type(entities_names.get(entities_names.curselection())))
+            if entities_names.size() > 0:
+                entity_details = DB.Database.get_entity_details(entities_names.get(entities_names.curselection()))
+                entity_info.delete("1.0", END)
                 entity_info.insert(END, entity_details)
 
+        def entities_list():
             # entities_names_frame = Frame()
             # entities_names = Listbox(entities_names_frame)
             entities_names.bind('<<ListboxSelect>>', on_select)
@@ -67,6 +69,7 @@ class UI(Frame):
             entities = DB.Database.get_entities()
             for item in entities:
                 # print item
+                # print str(type(item))
                 entities_names.insert(END, item)
             entities_names.config(yscrollcommand=scrollbar.set)
             scrollbar.config(command=entities_names.yview)
@@ -84,12 +87,25 @@ class UI(Frame):
 
         def remove(frame):
             def remove_entity():
-                if DB.Database.remove_entity(entities_names.get(ACTIVE)) == True:
-                    entities_names.delete(entities_names.curselection())
-                else:
-                    print "FAILURE!"
+                if entities_names.size() > 0:
+                    current_selection = entities_names.get(ACTIVE);
+                    if DB.Database.remove_entity(current_selection) == True:
+                        # print "curselec: " + str(entities_names.curselection())
+                        # print "curselec[0]: " + str(entities_names.curselection()[0])
+                        current_selection_index = int(entities_names.curselection()[0]);
+                        # entities_names.select_set(entities_names.curselection()[0]-1)
+                        entities_names.delete(entities_names.curselection())
+                        if current_selection_index == 0:
+                            entities_names.select_set(current_selection_index)
+                        else:
+                            entities_names.select_set(current_selection_index - 1)
+                        on_select(self)
+                    else:
+                        print "FAILURE!"
             remove_button = Button(frame, text="Remove", command=remove_entity)
             remove_button.grid(row=0, column=1)
+            # if entities_names.size() <= 0:
+            #     remove_button.state(["disabled"])
             # UI.entities_content.get
             return remove_button
 

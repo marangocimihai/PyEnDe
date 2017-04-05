@@ -9,10 +9,13 @@ class Database:
 
     @staticmethod
     def get_entity_ID(name):
+        name = "".join(str(x) for x in name)
+        print "Type in Db: " + str(type(name))
+        print "Name in Db: " + str(name)
         conn = Database.connect_to_database()
         c = conn.cursor()
         # print name
-        c.execute("SELECT ID FROM ENTITY WHERE NAME LIKE (?)", (name)) # Aici e ceva eroare cu binding care survine doar cand adaugi o noua entitate si selectezi o alta, etc. ... vezi tu maine
+        c.execute("SELECT ID FROM ENTITY WHERE NAME LIKE ?", (name,)) # Aici e ceva eroare cu binding care survine doar cand adaugi o noua entitate si selectezi o alta, etc. ... vezi tu maine
         conn.commit()
         return c.fetchone()
 
@@ -25,10 +28,16 @@ class Database:
 
     @staticmethod
     def get_entity_details(name):
+        print "Name in getdetails: " + str(name)
+        print "Name type in getdetails: " + str(type(name))
         ID = Database.get_entity_ID(name)
+        print "Dupa ce am apelat luarea ID-ului din get_entity_details"
+        print "Inainte: " + str(ID)
+        ID = "".join(str(x) for x in ID)
+        print "Dupa : " + str(ID)
         conn = Database.connect_to_database()
         c = conn.cursor()
-        c.execute("SELECT CONTENT FROM ENTITY WHERE ID = ?", (ID))
+        c.execute("SELECT CONTENT FROM ENTITY WHERE ID = ?", (ID,))
         conn.commit()
         # print c.fetchone()
         return c.fetchone()

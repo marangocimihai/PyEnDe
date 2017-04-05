@@ -37,10 +37,23 @@ class Controller():
         window.rowconfigure(1, weight=1)
         window.transient(frame)
         window.grab_set()
+        window.focus_set()
+        # name.focus
         # frame.grid()
+
+        def format(name_content):
+            temp = list()
+            temp_string = "".join(str(x) for x in name_content)
+            temp_string = temp_string[:-1]
+            temp.insert(0, temp_string)
+            temp = tuple(temp,)
+            return temp
+
         def add_entity_and_close_window(name_content, details_content):
             frame.destroy()
             if DB.Database.add_entity(name_content, details_content) == True:
-                entities_names.insert(entities_names.size(), name_content)
+                entities_names.insert(END, format(name_content))
+                # print name_content
+                # print "type : " + str(type(tuple(map(str, name_content))))
             else:
                 print "FAILURE!"
