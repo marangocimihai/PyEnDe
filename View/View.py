@@ -165,6 +165,12 @@ class UI(Frame):
 
         init_UI(self)
 
+    @staticmethod
+    def on_closing(root):
+        print "Closing!"
+        if Constants.Constans.is_encrypted == False:
+            
+
 def main():
     root = Tk()
     # root.columnconfigure(0, weight=1)
@@ -172,6 +178,7 @@ def main():
     root.columnconfigure(1, weight=1)
     root.rowconfigure(1, weight=0)
     root.geometry("700x400")
+    root.protocol("WM_DELETE_WINDOW", lambda:UI.on_closing(root))
     app = UI(root)
     # app.grid(sticky=N+S+E+W)
     # app.grid_columnconfigure(5, weight=10)
