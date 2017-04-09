@@ -1,3 +1,8 @@
 
-class Constans:
-    is_encrypted = False
+ACTION_ENCRYPT = 0
+ACTION_DECRYPT = 1
+ACTION_SAVE = 2
+ENCRYPTED_CONTENT = 1
+DECRYPTED_CONTENT = 0
+NORMAL_STATE = "normal"
+DISABLED_STATE = "disabled"

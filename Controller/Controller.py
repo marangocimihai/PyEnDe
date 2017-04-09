@@ -7,6 +7,7 @@ from Tkinter import *
 from ttk import *
 import Database.Db as DB
 from Database.Entity import *
+import Constants.Constants as Constants
 
 class Controller():
     @staticmethod
@@ -49,10 +50,11 @@ class Controller():
             temp = tuple(temp,)
             return temp
 
-        def add_entity_and_close_window(name_content, details_content):
+        def add_entity_and_close_window(name, details):
+            entity = Entity(name, details, Constants.DECRYPTED_CONTENT)
             frame.destroy()
-            if DB.Database.add_entity(name_content, details_content) == True:
-                entities_names.insert(END, format(name_content))
+            if DB.Database.add_entity(entity) == True:
+                entities_names.insert(END, entity.name)
                 # print name_content
                 # print "type : " + str(type(tuple(map(str, name_content))))
             else:

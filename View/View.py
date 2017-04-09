@@ -24,6 +24,12 @@ class UI(Frame):
         # self.grid_columnconfigure(0, weight=1)
         # self.grid_columnconfigure(1, weight=1)
         # self.entities_list_content = Listbox()
+        encrypt_and_decrypt_frame = Frame()
+        encrypt_button = Button(encrypt_and_decrypt_frame, text="Encrypt", command=lambda:update_entity(Constants.ACTION_ENCRYPT))
+        decrypt_button = Button(encrypt_and_decrypt_frame, text="Decrypt", command=lambda:update_entity(Constants.ACTION_DECRYPT))
+        save_frame = Frame()
+        save_button = Button(save_frame, text="Save", command=lambda:update_entity(Constants.ACTION_SAVE))
+        # entity = Entity.Entity(None, None, None)
         entities_names_frame = Frame()
         entities_names = Listbox(entities_names_frame)
         details_frame = Frame()
@@ -44,7 +50,7 @@ class UI(Frame):
             # UI.decrypt_button(self)
             encrypt_and_decrypt()
             details()
-            save_button()
+            customize_save_button()
             # self.grid()
             # for x in range(10):
             # Grid.columnconfigure(self, x, weight=1)
@@ -55,9 +61,27 @@ class UI(Frame):
             # print "Selected " + str(entities_names.curselection())
             # print "TIPUL: " + str(type(entities_names.get(entities_names.curselection())))
             if entities_names.size() > 0:
-                entity_details = DB.Database.get_entity_details(entities_names.get(entities_names.curselection()))
+                print "BEFORE: " + str(entities_names.get(ACTIVE))
+                entity = Entity.Entity(entities_names.get(ACTIVE), DB.Database.get_entity_details(entities_names.get(entities_names.curselection())), DB.Database.get_is_encrypted(entities_names.get(entities_names.curselection()))[0]) #aici ia numele ultimei entitati
+                print "DAAAAAAAAAAAAAAA -> " + str(DB.Database.get_is_encrypted(entities_names.get(entities_names.curselection())))
+                # entity_details = DB.Database.get_entity_details(entities_names.get(entities_names.curselection()))
+                print "ACILEA " + str(entity.is_encrypted)
                 entity_info.delete("1.0", END)
-                entity_info.insert(END, entity_details)
+                entity_info.insert(END, entity.content)
+                if (entity.get_is_encrypted() == Constants.ENCRYPTED_CONTENT):
+                    print "ENCRYPTED !"
+                    # encrypt_button.config(state="disabled")
+                    # decrypt_button.config(state="normal")
+                    # save_button.config(state="disabled")
+                    change_buttons_state(Constants.DISABLED_STATE, Constants.NORMAL_STATE, Constants.DISABLED_STATE)
+                    # entity_info.config(state="disabled") #nu se actualizeaza instant, trebuie dat un click in + / de revazut
+                elif (entity.is_encrypted == Constants.DECRYPTED_CONTENT):
+                    print "DECRYPTED !"
+                    # encrypt_button.config(state="normal")
+                    # decrypt_button.config(state="disabled")
+                    # save_button.config(state="normal")
+                    change_buttons_state(Constants.NORMAL_STATE, Constants.DISABLED_STATE, Constants.NORMAL_STATE)
+                    # entity_info.config(state="normal") #nu se actualizeaza instant, trebuie dat un click in + / de revazut
 
         def entities_list():
             # entities_names_frame = Frame()
@@ -84,7 +108,6 @@ class UI(Frame):
             add_button = Button(frame, text="Add", command=lambda:C.Controller.add(entities_names))
             add_button.grid(row=0, column=0)
             # add_frame.grid(row=1, column=0)
-            return add_button
 
         def remove(frame):
             def remove_entity():
@@ -108,7 +131,6 @@ class UI(Frame):
             # if entities_names.size() <= 0:
             #     remove_button.state(["disabled"])
             # UI.entities_content.get
-            return remove_button
 
         def add_and_remove():
             add_and_remove_frame = Frame()
@@ -116,34 +138,31 @@ class UI(Frame):
             remove(add_and_remove_frame)
             add_and_remove_frame.grid(row=1, column=0, ipady=10)
 
-        def encrypt_button(frame):
+        def cutomize_encrypt_button(frame):
             # encrypt_frame = Frame()
-            encrypt_button = Button(frame, text="Encrypt")
+            # encrypt_button = Button(frame, text="Encrypt", command=lambda:update_entity(Constants.ACTION_ENCRYPT))
             encrypt_button.grid(row=0, column=0)
+            # encrypt_button.config(state='disabled')
             # encrypt_frame.grid(row=1, column=1)
-            return encrypt_button
 
-        def decrypt_button(frame):
+        def customize_decrypt_button(frame):
             # decrypt_frame = Frame()
-            decrypt_button = Button(frame, text="Decrypt")
+            # decrypt_button = Button(frame, text="Decrypt", command=lambda:update_entity(Constants.ACTION_DECRYPT))
             decrypt_button.grid(row=0, column=1)
-            if Constants.Constans.is_encrypted == False:
-                decrypt_button.state(["disabled"])
+            # if Constants.is_encrypted == False:
+            #     decrypt_button.state(["disabled"])
             # decrypt_frame.grid(row=1, column=2)
-            return decrypt_button
 
         def encrypt_and_decrypt():
-            encrypt_and_decrypt_frame = Frame()
-            encrypt_button(encrypt_and_decrypt_frame)
-            decrypt_button(encrypt_and_decrypt_frame)
+            # encrypt_and_decrypt_frame = Frame()
+            cutomize_encrypt_button(encrypt_and_decrypt_frame)
+            customize_decrypt_button(encrypt_and_decrypt_frame)
             encrypt_and_decrypt_frame.grid(row=1, column=1, ipady=10)
 
-        def save_button():
-            def save():
-                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END))
-                DB.Database.set_new_content(entity)
-            save_frame = Frame()
-            save_button = Button(save_frame, text="Save", command=save)
+        def customize_save_button():
+            # def save():
+            #     entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END))
+            #     DB.Database.set_new_content(entity)
             save_button.grid(row=0, column=1)
             # decrypt_frame.grid(row=1, column=2)
             save_frame.grid(row=0, column=3, ipadx=10, pady= 25, sticky=N)
@@ -154,21 +173,52 @@ class UI(Frame):
             # entity_info.bind("<Key>", self.update_size)
             entity_info.columnconfigure(0, weight=1)
             entity_info.rowconfigure(0, weight=1)
-            entity_info.pack(fill='both', expand=True)
+            entity_info.pack(fill="both", expand=True)
             details_frame.grid(row=0, column=1, sticky=N+S+E+W, padx=25, pady=25)
-
             # details_frame.update()
             # entity_info.config(width=details_frame.winfo_width(), height=details_frame.winfo_height())
 
-        def separator(self):
-            ttk.Separator(self).grid(column=5)
+        def update_entity(action):
+            if action == Constants.ACTION_ENCRYPT:
+                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END), True)
+                if DB.Database.encrypt_content(entity) == True:
+                    DB.Database.is_encrypted(entity, Constants.ENCRYPTED_CONTENT)
+                    entity_info.delete(0.0, END)
+                    entity_info.insert(0.0, entity.content)
+                    # encrypt_button.config(state="disabled")
+                    # decrypt_button.config(state="normal")
+                    # save_button.config(state="disabled")
+                    change_buttons_state(Constants.DISABLED_STATE, Constants.NORMAL_STATE, Constants.DISABLED_STATE)
+                    # entity_info.config(state="disabled") #nu se actualizeaza instant, trebuie dat un click in + / de revazut
+            elif action == Constants.ACTION_DECRYPT:
+                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END), False)
+                if DB.Database.decrypt_content(entity) == True:
+                    DB.Database.is_encrypted(entity, Constants.DECRYPTED_CONTENT)
+                    entity_info.delete(0.0, END)
+                    entity_info.insert(0.0, entity.content)
+                    # encrypt_button.config(state="normal")
+                    # decrypt_button.config(state="disabled")
+                    # save_button.config(state="normal")
+                    change_buttons_state(Constants.NORMAL_STATE, Constants.DISABLED_STATE, Constants.NORMAL_STATE)
+                    # entity_info.config(state="normal") #nu se actualizeaza instant, trebuie dat un click in + / de revazut
+            elif action == Constants.ACTION_SAVE:
+                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END), False)
+                if DB.Database.set_new_content(entity) == True:
+                    entity_info.delete(0.0, END)
+                    entity_info.insert(0.0, entity.content)
+
+        def change_buttons_state(encrypt_button_state, decrypt_button_state, save_button_state):
+            encrypt_button.config(state=encrypt_button_state)
+            decrypt_button.config(state=decrypt_button_state)
+            save_button.config(state=save_button_state)
 
         init_UI(self)
 
     @staticmethod
     def on_closing(root):
         print "Closing!"
-        if Constants.Constans.is_encrypted == False:
+        root.destroy()
+        # if Constants.Constans.is_encrypted == False:
             
 
 def main():
