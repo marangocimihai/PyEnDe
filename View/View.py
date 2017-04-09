@@ -61,13 +61,14 @@ class UI(Frame):
             # print "Selected " + str(entities_names.curselection())
             # print "TIPUL: " + str(type(entities_names.get(entities_names.curselection())))
             if entities_names.size() > 0:
-                print "BEFORE: " + str(entities_names.get(ACTIVE))
-                entity = Entity.Entity(entities_names.get(ACTIVE), DB.Database.get_entity_details(entities_names.get(entities_names.curselection())), DB.Database.get_is_encrypted(entities_names.get(entities_names.curselection()))[0]) #aici ia numele ultimei entitati
-                print "DAAAAAAAAAAAAAAA -> " + str(DB.Database.get_is_encrypted(entities_names.get(entities_names.curselection())))
+                # print "BEFORE: " + str(entities_names.get(ACTIVE))
+                entity = Entity.Entity(entities_names.get(ACTIVE), DB.Database.get_entity_content(entities_names.get(entities_names.curselection())), DB.Database.get_is_encrypted(entities_names.get(entities_names.curselection()))[0]) #aici ia numele ultimei entitati
+                # print "DAAAAAAAAAAAAAAA -> " + str(DB.Database.get_is_encrypted(entities_names.get(entities_names.curselection())))
                 # entity_details = DB.Database.get_entity_details(entities_names.get(entities_names.curselection()))
-                print "ACILEA " + str(entity.is_encrypted)
+                # print "ACILEA " + str(entity.is_encrypted)
                 entity_info.delete("1.0", END)
                 entity_info.insert(END, entity.content)
+                # print "AICI MAAAAAAAAAAAAAA: " + entity.content
                 if (entity.get_is_encrypted() == Constants.ENCRYPTED_CONTENT):
                     print "ENCRYPTED !"
                     # encrypt_button.config(state="disabled")
@@ -87,15 +88,15 @@ class UI(Frame):
             # entities_names_frame = Frame()
             # entities_names = Listbox(entities_names_frame)
             entities_names.bind('<<ListboxSelect>>', on_select)
-            entities_names.pack(side=LEFT, fill=Y, expand=True)
+            entities_names.pack(side=LEFT, fill=Y, expand=True, ipadx=25)
             # entities_names.config(highlightbackground="blue")
             scrollbar = Tkinter.Scrollbar(entities_names_frame, orient="vertical")
             scrollbar.pack(side=LEFT, fill=Y)
             entities = DB.Database.get_entities()
             for item in entities:
-                # print item
+                print item
                 # print str(type(item))
-                entities_names.insert(END, item)
+                entities_names.insert(END, item[0])
             entities_names.config(yscrollcommand=scrollbar.set)
             scrollbar.config(command=entities_names.yview)
             entities_names_frame.grid(row=0, column=0, padx=25, pady=25, sticky=N+S)
@@ -180,8 +181,9 @@ class UI(Frame):
 
         def update_entity(action):
             if action == Constants.ACTION_ENCRYPT:
-                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END), True)
+                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END)[:-1], True)
                 if DB.Database.encrypt_content(entity) == True:
+                    print "ACILEA : " + entity.content
                     DB.Database.is_encrypted(entity, Constants.ENCRYPTED_CONTENT)
                     entity_info.delete(0.0, END)
                     entity_info.insert(0.0, entity.content)
@@ -191,8 +193,9 @@ class UI(Frame):
                     change_buttons_state(Constants.DISABLED_STATE, Constants.NORMAL_STATE, Constants.DISABLED_STATE)
                     # entity_info.config(state="disabled") #nu se actualizeaza instant, trebuie dat un click in + / de revazut
             elif action == Constants.ACTION_DECRYPT:
-                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END), False)
+                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END)[:-1], False)
                 if DB.Database.decrypt_content(entity) == True:
+                    print "ACILEA 2: " + entity.content
                     DB.Database.is_encrypted(entity, Constants.DECRYPTED_CONTENT)
                     entity_info.delete(0.0, END)
                     entity_info.insert(0.0, entity.content)
@@ -202,7 +205,7 @@ class UI(Frame):
                     change_buttons_state(Constants.NORMAL_STATE, Constants.DISABLED_STATE, Constants.NORMAL_STATE)
                     # entity_info.config(state="normal") #nu se actualizeaza instant, trebuie dat un click in + / de revazut
             elif action == Constants.ACTION_SAVE:
-                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END), False)
+                entity = Entity.Entity(entities_names.get(ACTIVE), entity_info.get(1.0, END)[:-1], False)
                 if DB.Database.set_new_content(entity) == True:
                     entity_info.delete(0.0, END)
                     entity_info.insert(0.0, entity.content)
@@ -213,27 +216,39 @@ class UI(Frame):
             save_button.config(state=save_button_state)
 
         init_UI(self)
+        DB.Database.create_database_file()
+        DB.Database.create_database_tables()
 
     @staticmethod
     def on_closing(root):
         print "Closing!"
+        non_encrypted_entities = DB.Database.get_non_encrypted_entities()
+        for current_entity in non_encrypted_entities:
+            print str(current_entity)
+            print "ID: " + str(current_entity[0])
+            print "Name: " + str(current_entity[1])
+            print "Content: " + str(current_entity[2])
+            print "Encrypted: " + str(current_entity[3])
+            entity = Entity.Entity(current_entity[1], current_entity[2], current_entity[3])
+            DB.Database.encrypt_content(entity)
+            DB.Database.is_encrypted(entity, Constants.ENCRYPTED_CONTENT)
+        # print str(DB.Database.get_non_encrypted_entities())
         root.destroy()
-        # if Constants.Constans.is_encrypted == False:
-            
+        # if Constants.Constants.is_encrypted == False:
 
-def main():
-    root = Tk()
-    # root.columnconfigure(0, weight=1)
-    root.rowconfigure(0, weight=1)
-    root.columnconfigure(1, weight=1)
-    root.rowconfigure(1, weight=0)
-    root.geometry("700x400")
-    root.protocol("WM_DELETE_WINDOW", lambda:UI.on_closing(root))
-    app = UI(root)
-    # app.grid(sticky=N+S+E+W)
-    # app.grid_columnconfigure(5, weight=10)
-    # app.grid_rowconfigure(5, weight=10)
-    root.mainloop()
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     root = Tk()
+#     # root.columnconfigure(0, weight=1)
+#     root.rowconfigure(0, weight=1)
+#     root.columnconfigure(1, weight=1)
+#     root.rowconfigure(1, weight=0)
+#     root.geometry("700x400")
+#     root.protocol("WM_DELETE_WINDOW", lambda:UI.on_closing(root))
+#     app = UI(root)
+#     # app.grid(sticky=N+S+E+W)
+#     # app.grid_columnconfigure(5, weight=10)
+#     # app.grid_rowconfigure(5, weight=10)
+#     root.mainloop()
+#
+# if __name__ == '__main__':
+#     main()

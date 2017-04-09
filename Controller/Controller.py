@@ -6,8 +6,8 @@ import ttk
 from Tkinter import *
 from ttk import *
 import Database.Db as DB
-from Database.Entity import *
 import Constants.Constants as Constants
+from Database.Entity import *
 
 class Controller():
     @staticmethod

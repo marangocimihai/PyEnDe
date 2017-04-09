@@ -42,9 +42,9 @@ class Anonymize():
         decrypted_data = Anonymize.cipher_for_decryption().decrypt(decoded_encrypted_data)
         return Anonymize.strip_padding(decrypted_data, INTERRUPT, PAD)
 
-our_data_to_encrypt = 'abc11100jgj56jku;u456$&*^(%NMJ:L"P    o78ri7000'
-encrypted_data = Anonymize.encrypt(our_data_to_encrypt)
-print 'Encrypted string:', encrypted_data
-
-decrypted_data = Anonymize.decrypt(encrypted_data)
-print 'Decrypted string:', decrypted_data
+# our_data_to_encrypt = 'abc11100jgj56jku;u456$&*^(%NMJ:L"P    o78ri7000'
+# encrypted_data = Anonymize.encrypt(our_data_to_encrypt)
+# print 'Encrypted string:', encrypted_data
+#
+# decrypted_data = Anonymize.decrypt(encrypted_data)
+# print 'Decrypted string:', decrypted_data

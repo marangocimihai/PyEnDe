@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/View/View.py" line="180" />
+    <bookmark url="file://$PROJECT_DIR$/View/View.py" line="181" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28994b25-ed29-47e0-a866-72fa2f10180d" name="Default" comment="" />
@@ -13,55 +13,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/PyEnDe$setup.coverage" NAME="setup Coverage Results" MODIFIED="1491754211152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_HOME_DIR$/plugins/pyinstaller-2.0" />
     <SUITE FILE_PATH="coverage/PyEnDe$_De_Anonymize.coverage" NAME="(De)Anonymize Coverage Results" MODIFIED="1491136797301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/(De)Anonymize" />
-    <SUITE FILE_PATH="coverage/PyEnDe$View.coverage" NAME="View Coverage Results" MODIFIED="1491700025361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/View" />
+    <SUITE FILE_PATH="coverage/PyEnDe$Controller.coverage" NAME="Controller Coverage Results" MODIFIED="1491728926781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controller" />
+    <SUITE FILE_PATH="coverage/PyEnDe$View.coverage" NAME="View Coverage Results" MODIFIED="1491729700178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/View" />
+    <SUITE FILE_PATH="coverage/PyEnDe$Main.coverage" NAME="Main Coverage Results" MODIFIED="1491755568192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/View" />
     <SUITE FILE_PATH="coverage/PyEnDe$_De_Anonymize__1_.coverage" NAME="(De)Anonymize (1) Coverage Results" MODIFIED="1491138230669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Aes" />
+    <SUITE FILE_PATH="coverage/PyEnDe$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1491729002275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Constants" />
+    <SUITE FILE_PATH="coverage/PyEnDe$Constants.coverage" NAME="Constants Coverage Results" MODIFIED="1491733844938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Constants" />
     <SUITE FILE_PATH="coverage/PyEnDe$Test.coverage" NAME="Test Coverage Results" MODIFIED="1491132964201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Anonymize.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Aes/Anonymize.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Db.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database/Db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1491697237539" expanded="true" signature="548:587" ph="SELECT ID FR... ENTITY" />
-                <marker date="1491697237539" expanded="true" signature="905:928" ph="SELECT NAME ENTITY" />
-                <marker date="1491697237539" expanded="true" signature="1437:1463" ph="SELECT * FRO... ENTITY" />
-                <marker date="1491697237539" expanded="true" signature="1437:1476" ph="SELECT CONTE... ENTITY" />
-                <marker date="1491697237539" expanded="true" signature="1908:1968" ph="insert into contacts... " />
-                <marker date="1491697237539" expanded="true" signature="2301:2319" ph="DELETE FROM " />
-                <marker date="1491697237539" expanded="true" signature="2301:2332" ph="DELETE FROM " />
-                <marker date="1491697237539" expanded="true" signature="2773:2815" ph="UPDATE ENTIT... " />
-                <marker date="1491697237539" expanded="true" signature="3227:3269" ph="UPDATE ENTIT... " />
-                <marker date="1491697237539" expanded="true" signature="3318:3362" ph="UPDATE ENTIT... " />
-                <marker date="1491697237539" expanded="true" signature="3803:3845" ph="UPDATE ENTIT... " />
-                <marker date="1491697237539" expanded="true" signature="3955:3999" ph="UPDATE ENTIT... " />
-                <marker date="1491697237539" expanded="true" signature="4277:4321" ph="UPDATE ENTIT... " />
-                <marker date="1491697237539" expanded="true" signature="4592:4633" ph="SELECT ENCRY... ID" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="View.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="View.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/View.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1756">
-              <caret line="115" column="76" lean-forward="true" selection-start-line="115" selection-start-column="76" selection-end-line="115" selection-end-column="76" />
+            <state relative-caret-position="204">
+              <caret line="90" column="71" lean-forward="false" selection-start-line="90" selection-start-column="71" selection-end-line="90" selection-end-column="71" />
               <folding>
                 <element signature="e#42#56#0" expanded="true" />
               </folding>
@@ -69,11 +47,71 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Db.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Database/Db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1491739176795" expanded="true" signature="573:738" ph="CREATE TABLE... ENTITY" />
+                <marker date="1491739176795" expanded="true" signature="1220:1259" ph="SELECT ID FR... ENTITY" />
+                <marker date="1491739176795" expanded="true" signature="1580:1603" ph="SELECT NAME ENTITY" />
+                <marker date="1491739176795" expanded="true" signature="2124:2150" ph="SELECT * FRO... ENTITY" />
+                <marker date="1491739176795" expanded="true" signature="2124:2163" ph="SELECT CONTE... ENTITY" />
+                <marker date="1491739176795" expanded="true" signature="2598:2658" ph="insert into contacts... " />
+                <marker date="1491739176795" expanded="true" signature="2991:3009" ph="DELETE FROM " />
+                <marker date="1491739176795" expanded="true" signature="2991:3022" ph="DELETE FROM " />
+                <marker date="1491739176795" expanded="true" signature="3466:3508" ph="UPDATE ENTIT... " />
+                <marker date="1491739176795" expanded="true" signature="3967:4009" ph="UPDATE ENTIT... " />
+                <marker date="1491739176795" expanded="true" signature="4055:4099" ph="UPDATE ENTIT... " />
+                <marker date="1491739176795" expanded="true" signature="4542:4584" ph="UPDATE ENTIT... " />
+                <marker date="1491739176795" expanded="true" signature="4691:4735" ph="UPDATE ENTIT... " />
+                <marker date="1491739176795" expanded="true" signature="5013:5057" ph="UPDATE ENTIT... " />
+                <marker date="1491739176795" expanded="true" signature="5327:5368" ph="SELECT ENCRY... ENTITY" />
+                <marker date="1491739176795" expanded="true" signature="5667:5707" ph="SELECT * FRO... ENTITY" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="28" column="78" lean-forward="false" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pyinstaller.py" pinned="false" current-in-tab="false">
+        <entry file="file://F:/Tools/PyCharm/PyInstaller-3.2.1/pyinstaller.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pyinstaller-gui.py" pinned="false" current-in-tab="true">
+        <entry file="file://F:/Tools/PyCharm/PyInstaller-3.2.1/pyinstaller-gui.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Constants.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Constants/Constants.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            <state relative-caret-position="187">
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -82,8 +120,8 @@
       <file leaf-file-name="Controller.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/Controller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="53" column="70" lean-forward="false" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
+            <state relative-caret-position="276">
+              <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
               <folding>
                 <element signature="e#43#57#0" expanded="true" />
               </folding>
@@ -91,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Entity.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database/Entity.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -136,7 +174,14 @@
       <find>index</find>
       <find>disabl</find>
       <find>.config</find>
+      <find>decrypt_content</find>
+      <find>set_new_content</find>
+      <find>encrypt_conte</find>
+      <find>get_entity_ID</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\marangocimihai\PycharmProjects\PyEnDe</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -149,10 +194,13 @@
         <option value="$PROJECT_DIR$/(De)Anonymize/(De)Anonymize.py" />
         <option value="$PROJECT_DIR$/Constants/Constans.py" />
         <option value="$PROJECT_DIR$/Database/Entity.py" />
+        <option value="$PROJECT_DIR$/Aes/Anonymize.py" />
         <option value="$PROJECT_DIR$/Controller/Controller.py" />
         <option value="$PROJECT_DIR$/Database/Db.py" />
-        <option value="$PROJECT_DIR$/Constants/Constants.py" />
         <option value="$PROJECT_DIR$/View/View.py" />
+        <option value="$PROJECT_DIR$/Constants/Constants.py" />
+        <option value="$PROJECT_DIR$/View/Main.py" />
+        <option value="F:/Tools/PyCharm/pip.py" />
       </list>
     </option>
   </component>
@@ -170,7 +218,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -184,6 +232,91 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PyEnDe">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="View">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PyEnDe">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Database">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PyEnDe">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Controller">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PyEnDe">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Constants">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PyEnDe">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Aes">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PyEnDe">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -258,8 +391,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,16 +399,17 @@
     <property name="last_opened_file_path" value="F:/Tools/GitShell/Git/git-bash.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe\Database" />
-      <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe\View" />
-      <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe\(DE)Anonymize-v1" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe\View" />
       <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe\Aes" />
       <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe\Database" />
       <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe\Controller" />
+      <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe\Database" />
+      <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe\View" />
+      <recent name="C:\Users\marangocimihai\PycharmProjects\PyEnDe\(DE)Anonymize-v1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -292,40 +424,59 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.View">
-    <configuration default="false" name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Main">
+    <configuration default="false" name="Constants" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Constants" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PyEnDe" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\marangocimihai\PycharmProjects\PyEnDe\View\View.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Constants/Constants.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="(De)Anonymize" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Controller" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/(De)Anonymize" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Controller" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PyEnDe" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/(De)Anonymize/(De)Anonymize.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Controller/Controller.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Constants" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyEnDe" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Constants/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -350,20 +501,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="(De)Anonymize (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Aes" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_HOME_DIR$/plugins/pyinstaller-2.0" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PyEnDe" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\marangocimihai\PycharmProjects\PyEnDe\Aes\Anonymize.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_HOME_DIR$/plugins/pyinstaller-2.0/setup.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -517,18 +668,40 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.Test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.(De)Anonymize" />
-      <item index="2" class="java.lang.String" itemvalue="Python.View" />
-      <item index="3" class="java.lang.String" itemvalue="Python.(De)Anonymize (1)" />
+    <configuration default="false" name="Main" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/View" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyEnDe" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/View/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Python.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Constants" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Controller" />
+      <item index="3" class="java.lang.String" itemvalue="Python.__init__" />
+      <item index="4" class="java.lang.String" itemvalue="Python.View" />
+      <item index="5" class="java.lang.String" itemvalue="Python.setup" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.View" />
-        <item index="1" class="java.lang.String" itemvalue="Python.(De)Anonymize (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.(De)Anonymize" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Test" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.setup" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Constants" />
+        <item index="2" class="java.lang.String" itemvalue="Python.View" />
+        <item index="3" class="java.lang.String" itemvalue="Python.__init__" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Controller" />
       </list>
     </recent_temporary>
   </component>
@@ -546,21 +719,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30972517" sideWeight="0.5046875" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30972517" sideWeight="0.4953125" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13398437" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13203125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -583,11 +756,28 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <default-breakpoints>
+        <breakpoint suspend="NONE" type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/View/View.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="115" column="76" lean-forward="true" selection-start-line="115" selection-start-column="76" selection-end-line="115" selection-end-column="76" />
+          <folding>
+            <element signature="e#42#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Aes/Anonymize.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -780,20 +970,22 @@
           <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1491697237539" expanded="true" signature="548:587" ph="SELECT ID FR... ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="905:928" ph="SELECT NAME ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="1437:1463" ph="SELECT * FRO... ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="1437:1476" ph="SELECT CONTE... ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="1908:1968" ph="insert into contacts... " />
-            <marker date="1491697237539" expanded="true" signature="2301:2319" ph="DELETE FROM " />
-            <marker date="1491697237539" expanded="true" signature="2301:2332" ph="DELETE FROM " />
-            <marker date="1491697237539" expanded="true" signature="2773:2815" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3227:3269" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3318:3362" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3803:3845" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3955:3999" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="4277:4321" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="4592:4633" ph="SELECT ENCRY... ID" />
+            <marker date="1491739176795" expanded="true" signature="573:738" ph="CREATE TABLE... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="1220:1259" ph="SELECT ID FR... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="1580:1603" ph="SELECT NAME ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="2124:2150" ph="SELECT * FRO... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="2124:2163" ph="SELECT CONTE... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="2598:2658" ph="insert into contacts... " />
+            <marker date="1491739176795" expanded="true" signature="2991:3009" ph="DELETE FROM " />
+            <marker date="1491739176795" expanded="true" signature="2991:3022" ph="DELETE FROM " />
+            <marker date="1491739176795" expanded="true" signature="3466:3508" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="3967:4009" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="4055:4099" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="4542:4584" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="4691:4735" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="5013:5057" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="5327:5368" ph="SELECT ENCRY... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="5667:5707" ph="SELECT * FRO... ENTITY" />
           </folding>
         </state>
       </provider>
@@ -858,20 +1050,22 @@
           <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1491697237539" expanded="true" signature="548:587" ph="SELECT ID FR... ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="905:928" ph="SELECT NAME ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="1437:1463" ph="SELECT * FRO... ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="1437:1476" ph="SELECT CONTE... ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="1908:1968" ph="insert into contacts... " />
-            <marker date="1491697237539" expanded="true" signature="2301:2319" ph="DELETE FROM " />
-            <marker date="1491697237539" expanded="true" signature="2301:2332" ph="DELETE FROM " />
-            <marker date="1491697237539" expanded="true" signature="2773:2815" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3227:3269" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3318:3362" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3803:3845" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3955:3999" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="4277:4321" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="4592:4633" ph="SELECT ENCRY... ID" />
+            <marker date="1491739176795" expanded="true" signature="573:738" ph="CREATE TABLE... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="1220:1259" ph="SELECT ID FR... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="1580:1603" ph="SELECT NAME ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="2124:2150" ph="SELECT * FRO... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="2124:2163" ph="SELECT CONTE... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="2598:2658" ph="insert into contacts... " />
+            <marker date="1491739176795" expanded="true" signature="2991:3009" ph="DELETE FROM " />
+            <marker date="1491739176795" expanded="true" signature="2991:3022" ph="DELETE FROM " />
+            <marker date="1491739176795" expanded="true" signature="3466:3508" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="3967:4009" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="4055:4099" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="4542:4584" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="4691:4735" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="5013:5057" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="5327:5368" ph="SELECT ENCRY... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="5667:5707" ph="SELECT * FRO... ENTITY" />
           </folding>
         </state>
       </provider>
@@ -893,6 +1087,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Aes/Anonymize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/Entity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Constants/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -900,73 +1118,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Aes/Anonymize.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/Entity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="395">
+          <caret line="1577" column="0" lean-forward="false" selection-start-line="1577" selection-start-column="0" selection-end-line="1577" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/Controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="53" column="70" lean-forward="false" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
+        <state relative-caret-position="276">
+          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
           <folding>
             <element signature="e#43#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/Db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1491697237539" expanded="true" signature="548:587" ph="SELECT ID FR... ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="905:928" ph="SELECT NAME ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="1437:1463" ph="SELECT * FRO... ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="1437:1476" ph="SELECT CONTE... ENTITY" />
-            <marker date="1491697237539" expanded="true" signature="1908:1968" ph="insert into contacts... " />
-            <marker date="1491697237539" expanded="true" signature="2301:2319" ph="DELETE FROM " />
-            <marker date="1491697237539" expanded="true" signature="2301:2332" ph="DELETE FROM " />
-            <marker date="1491697237539" expanded="true" signature="2773:2815" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3227:3269" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3318:3362" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3803:3845" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="3955:3999" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="4277:4321" ph="UPDATE ENTIT... " />
-            <marker date="1491697237539" expanded="true" signature="4592:4633" ph="SELECT ENCRY... ID" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Constants/Constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/View.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1756">
-          <caret line="115" column="76" lean-forward="true" selection-start-line="115" selection-start-column="76" selection-end-line="115" selection-end-column="76" />
+        <state relative-caret-position="204">
+          <caret line="90" column="71" lean-forward="false" selection-start-line="90" selection-start-column="71" selection-end-line="90" selection-end-column="71" />
           <folding>
             <element signature="e#42#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Database/Db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1491739176795" expanded="true" signature="573:738" ph="CREATE TABLE... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="1220:1259" ph="SELECT ID FR... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="1580:1603" ph="SELECT NAME ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="2124:2150" ph="SELECT * FRO... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="2124:2163" ph="SELECT CONTE... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="2598:2658" ph="insert into contacts... " />
+            <marker date="1491739176795" expanded="true" signature="2991:3009" ph="DELETE FROM " />
+            <marker date="1491739176795" expanded="true" signature="2991:3022" ph="DELETE FROM " />
+            <marker date="1491739176795" expanded="true" signature="3466:3508" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="3967:4009" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="4055:4099" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="4542:4584" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="4691:4735" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="5013:5057" ph="UPDATE ENTIT... " />
+            <marker date="1491739176795" expanded="true" signature="5327:5368" ph="SELECT ENCRY... ENTITY" />
+            <marker date="1491739176795" expanded="true" signature="5667:5707" ph="SELECT * FRO... ENTITY" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Constants/Constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.735/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/pyinstaller-2.0/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Tools/PyCharm/pyinstaller-2.0/pyinstaller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Tools/PyCharm/pyinstaller-2.0/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Tools/PyCharm/pip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="2178" column="47" lean-forward="false" selection-start-line="2178" selection-start-column="47" selection-end-line="2178" selection-end-column="47" />
+          <folding>
+            <element signature="e#1121#1135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="28" column="78" lean-forward="false" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Tools/PyCharm/PyInstaller-3.2.1/pyinstaller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Tools/PyCharm/PyInstaller-3.2.1/pyinstaller-gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
