@@ -1,10 +1,13 @@
-import tkSimpleDialog
-import urllib2
-from Tkinter import *
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import tkMessageBox
-from ttk import *
-import View
-import Constants.Constants as Constants
+import tkSimpleDialog
+from Tkinter import *
+
+import GUI
+from Driver import Constants as Constants
+
 
 def password():
     temp_window = Tk()
@@ -38,8 +41,8 @@ def main():
     root.columnconfigure(1, weight=1)
     root.rowconfigure(1, weight=0)
     root.geometry("700x400")
-    root.protocol("WM_DELETE_WINDOW", lambda:View.UI.on_closing(root))
-    app = View.UI(root)
+    root.protocol("WM_DELETE_WINDOW", lambda:GUI.UI.on_closing(root))
+    app = GUI.UI(root)
     # app.grid(sticky=N+S+E+W)
     # app.grid_columnconfigure(5, weight=10)
     # app.grid_rowconfigure(5, weight=10)

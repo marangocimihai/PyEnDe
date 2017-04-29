@@ -1,13 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
 import Tkinter
-import ttk
 from Tkinter import *
 from ttk import *
+
+import Driver.Controller as C
 import Database.Db as DB
-import Controller.Controller as C
 import Database.Entity as Entity
-import Constants.Constants as Constants
+from Driver import Constants as Constants
+
 
 # Ai putea incerca sa faci toate functiile ca fiind functii imbricate constructorului, si sa incerci sa accesezi astfel unii membri.
 # Cam toate widgeturile ar trebui declarate in constructor, si dupa prelucrate in functiile imbricate aferente, pentru a reusi. :)
@@ -25,8 +27,10 @@ class UI(Frame):
         # self.grid_columnconfigure(1, weight=1)
         # self.entities_list_content = Listbox()
         encrypt_and_decrypt_frame = Frame()
-        encrypt_button = Button(encrypt_and_decrypt_frame, text="Encrypt", command=lambda:update_entity(Constants.ACTION_ENCRYPT))
-        decrypt_button = Button(encrypt_and_decrypt_frame, text="Decrypt", command=lambda:update_entity(Constants.ACTION_DECRYPT))
+        encrypt_button = Button(encrypt_and_decrypt_frame, text="Encrypt", command=lambda:update_entity(
+            Constants.ACTION_ENCRYPT))
+        decrypt_button = Button(encrypt_and_decrypt_frame, text="Decrypt", command=lambda:update_entity(
+            Constants.ACTION_DECRYPT))
         save_frame = Frame()
         save_button = Button(save_frame, text="Save", command=lambda:update_entity(Constants.ACTION_SAVE))
         # entity = Entity.Entity(None, None, None)
@@ -62,7 +66,9 @@ class UI(Frame):
             # print "TIPUL: " + str(type(entities_names.get(entities_names.curselection())))
             if entities_names.size() > 0:
                 # print "BEFORE: " + str(entities_names.get(ACTIVE))
-                entity = Entity.Entity(entities_names.get(ACTIVE), DB.Database.get_entity_content(entities_names.get(entities_names.curselection())), DB.Database.get_is_encrypted(entities_names.get(entities_names.curselection()))[0]) #aici ia numele ultimei entitati
+                entity = Entity.Entity(entities_names.get(ACTIVE),
+                                       DB.Database.get_entity_content(entities_names.get(entities_names.curselection())),
+                                       DB.Database.get_is_encrypted(entities_names.get(entities_names.curselection()))[0]) #aici ia numele ultimei entitati
                 # print "DAAAAAAAAAAAAAAA -> " + str(DB.Database.get_is_encrypted(entities_names.get(entities_names.curselection())))
                 # entity_details = DB.Database.get_entity_details(entities_names.get(entities_names.curselection()))
                 # print "ACILEA " + str(entity.is_encrypted)
@@ -215,9 +221,9 @@ class UI(Frame):
             decrypt_button.config(state=decrypt_button_state)
             save_button.config(state=save_button_state)
 
-        init_UI(self)
         DB.Database.create_database_file()
         DB.Database.create_database_tables()
+        init_UI(self)
 
     @staticmethod
     def on_closing(root):

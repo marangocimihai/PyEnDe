@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 
 import Tkinter
-import ttk
 from Tkinter import *
 from ttk import *
+import Driver.Constants as Constants
 import Database.Db as DB
-import Constants.Constants as Constants
 from Database.Entity import *
+
 
 class Controller():
     @staticmethod

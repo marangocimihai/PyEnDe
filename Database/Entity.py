@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 class Entity():
     def __init__(self, name, content, is_encrypted):
         self.name = name

@@ -1,29 +1,36 @@
-import sqlite3
-import Entity
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import os
+import sqlite3
+
 import Aes.Anonymize as Aes
-import Constants.Constants as Constants
+from Driver import Constants as Constants
+
 
 class Database:
     @staticmethod
     def create_database_file():
-        current_directory = os.getcwd()
-        path = current_directory + Constants.DATABASE_FILE_NAME
-        print "Path: " + path
-        if not os.path.exists(path):
-            open(path, "w+")
+        # current_directory = os.getcwd()
+        # path = current_directory + Constants.DATABASE_FILE_NAME
+        print "Path: " + Constants.DATABASE_FILE_PATH
+        if not os.path.exists(Constants.DATABASE_FILE_PATH):
+            open(Constants.DATABASE_FILE_PATH, "w+")
 
     @staticmethod
     def create_database_tables():
-        conn = sqlite3.connect('C:\Users\marangocimihai\PycharmProjects\PyEnDe\View\passwords.db')
+        conn = sqlite3.connect(Constants.DATABASE_FILE_PATH)
         c = conn.cursor()
-        c.execute('''CREATE TABLE IF NOT EXISTS ENTITY(ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, NAME TEXT NOT NULL UNIQUE, CONTENT TEXT NOT NULL, ENCRYPTED INTEGER NOT NULL);''')
+        c.execute('''CREATE TABLE IF NOT EXISTS ENTITY(ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, 
+                                                       NAME TEXT NOT NULL UNIQUE, 
+                                                       CONTENT TEXT NOT NULL, 
+                                                       ENCRYPTED INTEGER NOT NULL);''')
         conn.commit()
         return
 
     @staticmethod
     def connect_to_database():
-        conn = sqlite3.connect('C:\Users\marangocimihai\Desktop\db.db')
+        conn = sqlite3.connect(Constants.DATABASE_FILE_PATH)
         return conn
 
     @staticmethod
